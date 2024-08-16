@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\DB;
 
 class VentesController extends Controller
 {
+    
+   
     public function get_Mouvements(){
         $liste_mouvements = (new Mouvements())->get_Mouvements();
         return view('historique.mouvements',compact('liste_mouvements'));
