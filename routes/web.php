@@ -9,6 +9,8 @@ use App\Http\Controllers\VenteApiController;
 
 use App\Http\Controllers\OutilApiController;
 use App\Http\Controllers\MouvementApiController;
+use App\Http\Controllers\AdminApiController;
+
 
 
 
@@ -44,6 +46,8 @@ Route::get('/api/voir_stock', [MouvementApiController::class, 'voir_api_Stock'])
 Route::get('/api/voir_cout_vente', [MouvementApiController::class, 'get_api_Price_product'])->name('get_api_Price_product');
 
 
+// admin api
+Route::post('/api/go_register', [AdminApiController::class, 'insert_api_admin'])->name('go_register_api');
 
 
 // outil 
