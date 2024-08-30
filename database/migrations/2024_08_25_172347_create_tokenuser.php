@@ -13,9 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('historique_achats', function (Blueprint $table) {
+        Schema::create('tokenuser', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('api_token', 80)->unique()->nullable()->default(null);
+            $table->unsignedBigInteger('iduser')->nullable();
+            
+            // Ajouter la contrainte de clé étrangère
+            $table->foreign('iduser')->references('id')->on('admin')->onDelete('cascade');
         });
     }
 
@@ -26,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('historique_achats');
+        Schema::dropIfExists('tokenuser');
     }
 };

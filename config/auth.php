@@ -40,6 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'api' => [
+            'driver' => 'token',
+            'provider' => 'tokenusers', // Nom du provider que nous allons définir ci-dessous
+        ],
     ],
 
     /*
@@ -60,9 +64,13 @@ return [
     */
 
     'providers' => [
-        'users' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+        // 'users' => [
+        //     'driver' => 'eloquent',
+        //     'model' => App\Models\User::class,
+        // ],
+       'tokenusers' => [
+        'driver' => 'tokenuser', // Nom du provider défini dans le TokenUserServiceProvider
+        'model' => App\Models\TokenUser::class,
         ],
 
         // 'users' => [
