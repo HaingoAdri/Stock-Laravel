@@ -79,6 +79,9 @@ Route::middleware('auth:api')->put('/api/produits/update/{id}', [OutilApiControl
 Route::middleware('auth:api')->delete('api/produits/delete/{id}', [OutilApiController::class, 'delete_api_produit'])->name('delete_api_produit');
 Route::middleware('auth:api')->post('/api/insert_achats', [MouvementApiController::class, 'insert_api_achats'])->name('insert_api_achats');
 
+Route::middleware('auth:api')->post('/api/creation-panier', [MouvementApiController::class, 'createPanier_api'])->name('creation-panier-api');
+
+
 
 //outil api
 Route::get('/api/categorie', [OutilApiController::class, 'list_to_Api_Categorie_information'])->name('api_categorie');
@@ -91,6 +94,8 @@ Route::get('/api/voir_cout_vente', [MouvementApiController::class, 'get_api_Pric
 Route::get('/api/historique_vente', [VenteApiController::class, 'liste_Api_historique_vente'])->name('api_historique_vente');
 Route::get('/api/historique_achats', [VenteApiController::class, 'liste_Api_historique_achats'])->name('api_historique_achats');
 Route::get('/api/mouvements', [VenteApiController::class, 'get_ApiMouvements'])->name('apiMouvements');
+
+Route::get('/api/caisse', [MouvementApiController::class, 'creation_de_panier_api'])->name('caisse_api');
 
 
 
