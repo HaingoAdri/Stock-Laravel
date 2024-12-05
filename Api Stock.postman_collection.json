@@ -1,0 +1,493 @@
+{
+	"info": {
+		"_postman_id": "dc3a06d3-2234-4a3a-9733-b9f41f2df5a9",
+		"name": "Api Stock",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31254493"
+	},
+	"item": [
+		{
+			"name": "vente controller",
+			"item": [
+				{
+					"name": "list mouvement",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "hisotrique achat",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/historique_achats",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"historique_achats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "historique vente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/historique_vente",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"historique_vente"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "outil controller",
+			"item": [
+				{
+					"name": "categorie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/categorie",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"categorie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "taille",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/taille",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"taille"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "couleur",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/couleur",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"couleur"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "produit",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/produits",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"produits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit produit",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/produits/edit/P001",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"produits",
+								"edit",
+								"P001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "new produit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\": \"Produit A\",\r\n    \"couleur\": 1,\r\n    \"taille\": 1,\r\n    \"categorie\": \"CAT01\"\r\n}\r\n   \r\n  ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/insert_produits",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"insert_produits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "new list produit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n  \"produits\": [\r\n    {\r\n      \"nom\": \"Produit B\",\r\n      \"couleur\": 2,\r\n      \"taille\": 4,\r\n      \"categorie\": \"CAT04\" \r\n    },\r\n    {\r\n      \"nom\": \"Produit C\",\r\n      \"couleur\": 6,\r\n      \"taille\": 2,\r\n      \"categorie\": \"CAT10\"\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/insert_list_produits",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"insert_list_produits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "new categorie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\": \"test categorie\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/insert_categorie",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"insert_categorie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "new taille",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\": \"test taille\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/insert_taille",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"insert_taille"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "new couleur",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\": \"test couleur\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/insert_couleur",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"insert_couleur"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update produit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\": \"Robe Rose\",\r\n    \"couleur\": 8,\r\n    \"taille\": 2,\r\n    \"categorie\": \"CAT01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/produits/update/P0004",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"produits",
+								"update",
+								"P0004"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete produit",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/produits/delete/P0007",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"produits",
+								"delete",
+								"P0007"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "mouvement",
+			"item": [
+				{
+					"name": "insert list achat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n  \"achat\": [\r\n    {\r\n      \"date\": \"2024-01-04\",\r\n      \"produit\": \"P004\",\r\n      \"quantite\": 4,\r\n      \"prix\": 2000 \r\n    },\r\n    {\r\n       \"date\": \"2024-01-24\",\r\n      \"produit\": \"P001\",\r\n      \"quantite\": 3,\r\n      \"prix\": 1000 \r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/insert_achats",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"insert_achats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "voir stock (liste achat)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/voir_stock",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"voir_stock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cout vente du produit",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/voir_cout_vente",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"voir_cout_vente"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
